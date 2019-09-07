@@ -1,0 +1,15 @@
+<div class="row">
+    <div class="col-xs-12">
+        <button class="btn btn-default" (click)="goToPrev()" [disabled]="selectedQuestionIndex==0">Previous question</button>
+        <button class="btn btn-primary" (click)="goToNext()" [disabled]="!selectedQuestion.isAnswerChecked || selectedQuestionIndex >=questions.length - 1">Next question</button>
+      </div>
+  <div class="col-xs-12 question">
+    <app-question [selectedAnswer]=selectedAnswer 
+    [question]=selectedQuestion 
+    [selectedQuestionIndex] = "selectedQuestionIndex"
+    ></app-question>
+  </div>
+ 
+  <div class="col-md-12" *ngFor="let question of questions">    
+  </div>
+</div>

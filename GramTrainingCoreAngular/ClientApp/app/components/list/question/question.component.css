@@ -1,0 +1,8 @@
+.result img{
+    max-width: 100%;
+    max-height: 200px;
+}
+.question-text,
+.answers{
+    font-size:22px;
+}

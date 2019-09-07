@@ -1,0 +1,29 @@
+<div class='container-fluid'>
+    <div class='row'>
+        <div class='col-sm-3'>
+            <header></header>
+        </div>
+        <div class='col-sm-9 body-content'>
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>
+<div class="row container app-english">
+    <div class="col-md-12">
+        <h1>
+            „аси Present Simple, Present Continious, Past Simple
+            в англ≥йськ≥й мов≥
+        </h1>
+        <!--Add routes here-->
+        <app-header (tabSelected)="selectTab($event)"
+                    [selectedTab]="selectedTab">
+        </app-header>
+        <!--Change to use routes <router-outlet></router-outlet>-->
+        <div *ngIf="selectedTab.tab=='trains'">
+            <app-list></app-list>
+        </div>
+        <div *ngIf="selectedTab.tab =='rules'">
+            <app-rules></app-rules>
+        </div>
+    </div>
+</div>

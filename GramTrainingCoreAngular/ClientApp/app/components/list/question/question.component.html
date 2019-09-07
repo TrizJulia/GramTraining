@@ -1,0 +1,39 @@
+<div class="col-md-4">
+ <!-- <div [class] = "isShownError ? 'alert alert-danger alert-dismissible show' 
+  : 'alert alert-danger alert-dismissible fade'" role="alert">
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close" (click)="hideError()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      {{errorMessage}}
+    </div>-->
+  <h4>Question</h4>
+  <div class="question-text">{{question.questionText}}</div>
+  <button class="btn btn-primary" (click)="check()"
+  [disabled]="question.isAnswerChecked">Check your answer</button>
+ 
+  <div *ngIf="question.isAnswerChecked" class="result">  
+    <h3>Result</h3>  
+   <div *ngIf="question.isAnswerChecked && question.isRight" class="success">    
+     <div class="alert alert-success">Right</div>
+    <img [src]="getSuccessImage()" alt="">
+    </div>
+    <div *ngIf="question.isAnswerChecked && !question.isRight" class="try-more">
+      <div class="alert alert-danger">It doesn't work. Another spell is needed</div>
+      <img src="/assets/thinking_pony.png" alt="">
+    </div>
+  </div>
+</div>
+<div class="col-md-6">
+  <h4>Choose right answer</h4>
+  <div  class="list-group answers">
+    <div *ngFor="let answ of question.englishAnswers ; index as i"
+     (click)="selectAnswer(i)"
+     [class]="getClass(i)">{{answ}}</div>
+  </div>
+</div>
+<!-- <div class="row">
+    <div class="col-xs-offset-4 col-md-5">      
+        <button class="btn btn-primary" (click)="check()"
+         [disabled]="question.isAnswerChecked">Check your answer</button>
+      </div>
+</div> -->

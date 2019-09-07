@@ -1,0 +1,14 @@
+<header>
+  <ul class="nav nav-pills">
+      <li class="nav-item">
+        <a  [class]="selectedTab.tab =='trains' ?
+        'nav-link active': 'nav-link'" 
+        (click)="Navigate('trains')" href="#">Тренування</a>
+      </li>
+      <li class="nav-item">
+        <a [class]="selectedTab.tab =='rules' ?
+        'nav-link active': 'nav-link'"
+         (click)="Navigate('rules')" href="#">Правила</a>
+      </li>           
+    </ul>
+</header>

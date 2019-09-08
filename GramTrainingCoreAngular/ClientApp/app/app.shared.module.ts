@@ -13,6 +13,8 @@ import { ListComponent } from './components/list/list.component';
 import { QuestionComponent } from './components/list/question/question.component';
 import { RulesComponent } from './components/rules/rules.component';
 import { HeaderComponent } from './components/header/header.component';
+import { AppRoutingModule } from './app-routing.module';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 
 @NgModule({
@@ -25,19 +27,14 @@ import { HeaderComponent } from './components/header/header.component';
         ListComponent,
         QuestionComponent,
         RulesComponent,
-        HeaderComponent
+        HeaderComponent,
+        PageNotFoundComponent
     ],
     imports: [
         CommonModule,
         HttpModule,
         FormsModule,
-        RouterModule.forRoot([
-            { path: '', redirectTo: 'home', pathMatch: 'full' },
-            { path: 'home', component: HomeComponent },
-            { path: 'counter', component: CounterComponent },
-            { path: 'fetch-data', component: FetchDataComponent },
-            { path: '**', redirectTo: 'home' }
-        ])
+        AppRoutingModule        
     ]
 })
 export class AppModuleShared {

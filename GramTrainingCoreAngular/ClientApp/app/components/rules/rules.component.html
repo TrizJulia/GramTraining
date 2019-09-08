@@ -2,7 +2,7 @@
   <li class="nav-item" *ngFor="let tens of tenses; index as i">
     <a [class]="selectedTens == i ? 'nav-link active' : 'nav-link'"
     (click) = 'selectTens(i)'
-     href="#">{{tens}}</a>
+     >{{tens}}</a>
   </li>                       
 </ul>
 <div class="row">

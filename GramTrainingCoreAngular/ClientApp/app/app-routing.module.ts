@@ -9,7 +9,7 @@ const appRoutes: Routes = [
     { path: '', component: ListComponent },
     { path: 'rules', component: RulesComponent},
     { path: '**', redirectTo: '/not-found' } 
-]
+];
 
 @NgModule({
     imports: [

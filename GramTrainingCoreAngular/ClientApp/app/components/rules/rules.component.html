@@ -1,59 +1,74 @@
-<ul class="nav nav-tabs" >
-  <li class="nav-item" *ngFor="let tens of tenses; index as i">
-    <a [class]="selectedTens == i ? 'nav-link active' : 'nav-link'"
-    (click) = 'selectTens(i)'
-     >{{tens}}</a>
-  </li>                       
-</ul>
 <div class="row">
-  <div class="col-xs-12" *ngIf="selectedTens === 1">
-      <div class="jumbotron">
-          <h1 class="display-3">Past Simple</h1>
-          <p class="lead">Past Simple показывает факт в прошлом или единичное действие, которое 
-            закончилось в прошлом.
-              Здесь часто используются слова, указывающие на время действия: yesterday (вчера), 
-              two weeks ago (две недели назад), the other day (на днях), a long time ago (давно), last month (в прошлом месяце), in 2010 (в 2010 году), 
-              on Monday (в понедельник), during my holidays (во время каникул) и т. д.
+    <div class="col-xs-12">
+        <h1> Present Simple, Present Continious, Past Simple </h1>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <ul class="nav nav-tabs">
+            <li class="nav-item" *ngFor="let tens of tenses; index as i">
+                <a [class]="selectedTens == i ? 'nav-link active' : 'nav-link'"
+                    (click)='selectTens(i)'>{{tens}}</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12" *ngIf="selectedTens === 1">
+        <div class="jumbotron">
+            <h1 class="display-3">Past Simple</h1>
+            <p class="lead">
+                Past Simple показывает факт в прошлом или единичное действие, которое
+                закончилось в прошлом.
+                Здесь часто используются слова, указывающие на время действия: yesterday (вчера),
+                two weeks ago (две недели назад), the other day (на днях), a long time ago (давно), last month (в прошлом месяце), in 2010 (в 2010 году),
+                on Monday (в понедельник), during my holidays (во время каникул) и т. д.
                 <pre>I saw him yesterday. – Я видел его вчера. (единичное действие в прошлом, вчера уже закончилось)</pre>
-              <p>Мы употребляем Past Simple, чтобы рассказать о старых привычках и повторяющихся
-                 действиях. Эти действия неоднократно происходили в прошлом, но сейчас уже не совершаются. В таких предложениях 
-              могут стоять наречия often (часто), sometimes (иногда), always (всегда) и т. д.<p>
-               <pre>
-                  He always bought pizza on Sunday. 
-                  – Он всегда покупал пиццу по воскресеньям. (сейчас он не делает этого)
-               </pre>
-                <p>Мы используем Past Simple, когда рассказываем историю или перечисляем 
-                  несколько событий, которые происходили одно за другим в прошлом.</p>
-                  <pre>
-                      She came in and sat at the table – Она вошла и села за стол.
-                  </pre>
-          <hr class="my-4">                   
+            <p>
+                Мы употребляем Past Simple, чтобы рассказать о старых привычках и повторяющихся
+                действиях. Эти действия неоднократно происходили в прошлом, но сейчас уже не совершаются. В таких предложениях
+                могут стоять наречия often (часто), sometimes (иногда), always (всегда) и т. д.
+            <p>
+                <pre>
+            He always bought pizza on Sunday. 
+            – Он всегда покупал пиццу по воскресеньям. (сейчас он не делает этого)
+        </pre>
+            <p>
+                Мы используем Past Simple, когда рассказываем историю или перечисляем
+                несколько событий, которые происходили одно за другим в прошлом.
+            </p>
+            <pre>
+                She came in and sat at the table – Она вошла и села за стол.
+            </pre>
+            <hr class="my-4">
         </div>
-  </div>
-  <div class="col-xs-12" *ngIf="selectedTens === 0">
-      <div class="jumbotron">
-          <h1 class="display-3">Present Simple</h1>
-          <p class="lead">Сегодня мы говорим о Простом Настоящем времени. На английском языке оно звучит как Present Simple.
-             Что оно означает? Каждый человек совершает какие-то действия: просыпается,
-              одевается, завтракает, идёт в школу, на работу, читает, пишет и так далее. 
-              Эти действия повторяются время от времени: ежедневно (every day), 
-              каждое утро (every morning), каждый вечер (every evening),
-               каждый год (every year), по выходным (at weekends).
+    </div>
+    <div class="col-xs-12" *ngIf="selectedTens === 0">
+        <div class="jumbotron">
+            <h1 class="display-3">Present Simple</h1>
+            <p class="lead">
+                Сегодня мы говорим о Простом Настоящем времени. На английском языке оно звучит как Present Simple.
+                Что оно означает? Каждый человек совершает какие-то действия: просыпается,
+                одевается, завтракает, идёт в школу, на работу, читает, пишет и так далее.
+                Эти действия повторяются время от времени: ежедневно (every day),
+                каждое утро (every morning), каждый вечер (every evening),
+                каждый год (every year), по выходным (at weekends).
                 Мы их совершаем обычно <b>(usually)</b>,
-                 редко <strong>(seldom)</strong>, часто <b>(often)</b> или иногда <b>(sometimes)</b>, но всегда в настоящем.
-          <hr class="my-4">
-          <p>I usually jump – Я обычно прыгаю.</p>
-          <p> Every year I swim in the sea – Каждый год я плаваю в море.</p>
+                редко <strong>(seldom)</strong>, часто <b>(often)</b> или иногда <b>(sometimes)</b>, но всегда в настоящем.
+                <hr class="my-4">
+            <p>I usually jump – Я обычно прыгаю.</p>
+            <p> Every year I swim in the sea – Каждый год я плаваю в море.</p>
         </div>
-  </div>
-  <div class="col-xs-12" *ngIf="selectedTens === 2">
-      <div class="jumbotron">
-          <h1 class="display-3">Present Continuous</h1>
-          <p class="lead">Present Continuous употребляется, когда нужно рассказать,
-             что вы делаете сейчас (now), прямо сейчас (right now).                      
-          <hr class="my-4">
-          <p>What are you doing now? - Что ты делаешь сейчас</p>
-          <p>I am jumping – Я  прыгаю.</p>
+    </div>
+    <div class="col-xs-12" *ngIf="selectedTens === 2">
+        <div class="jumbotron">
+            <h1 class="display-3">Present Continuous</h1>
+            <p class="lead">
+                Present Continuous употребляется, когда нужно рассказать,
+                что вы делаете сейчас (now), прямо сейчас (right now).
+                <hr class="my-4">
+            <p>What are you doing now? - Что ты делаешь сейчас</p>
+            <p>I am jumping – Я  прыгаю.</p>
         </div>
-  </div>
+    </div>
 </div>

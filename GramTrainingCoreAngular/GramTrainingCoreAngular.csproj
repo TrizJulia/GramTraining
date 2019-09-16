@@ -46,6 +46,8 @@
     <Compile Remove="Migrations\20190916062457_SeedQuestionAnswer.Designer.cs" />
     <Compile Remove="Migrations\20190916062945_FixQuestionAnswerForeignKey.cs" />
     <Compile Remove="Migrations\20190916062945_FixQuestionAnswerForeignKey.Designer.cs" />
+    <Compile Remove="Migrations\20190916080652_New.cs" />
+    <Compile Remove="Migrations\20190916080652_New.Designer.cs" />
   </ItemGroup>
 
   <Target Name="DebugRunWebpack" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('wwwroot\dist') ">

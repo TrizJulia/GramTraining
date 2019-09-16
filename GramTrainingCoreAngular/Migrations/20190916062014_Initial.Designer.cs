@@ -4,14 +4,16 @@ using GramTrainingCoreAngular.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace GramTrainingCoreAngular.Migrations
 {
     [DbContext(typeof(GrDbContext))]
-    partial class GrDbContextModelSnapshot : ModelSnapshot
+    [Migration("20190916062014_Initial")]
+    partial class Initial
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -123,104 +125,6 @@ namespace GramTrainingCoreAngular.Migrations
                     b.HasIndex("AnswerId");
 
                     b.ToTable("QuestionAnswer");
-
-                    b.HasData(
-                        new
-                        {
-                            QuestionId = 1,
-                            AnswerId = 1,
-                            Id = 1
-                        },
-                        new
-                        {
-                            QuestionId = 1,
-                            AnswerId = 2,
-                            Id = 2
-                        },
-                        new
-                        {
-                            QuestionId = 1,
-                            AnswerId = 3,
-                            Id = 3
-                        },
-                        new
-                        {
-                            QuestionId = 1,
-                            AnswerId = 4,
-                            Id = 4
-                        },
-                        new
-                        {
-                            QuestionId = 1,
-                            AnswerId = 5,
-                            Id = 5
-                        },
-                        new
-                        {
-                            QuestionId = 1,
-                            AnswerId = 6,
-                            Id = 6
-                        },
-                        new
-                        {
-                            QuestionId = 1,
-                            AnswerId = 7,
-                            Id = 7
-                        },
-                        new
-                        {
-                            QuestionId = 1,
-                            AnswerId = 8,
-                            Id = 8
-                        },
-                        new
-                        {
-                            QuestionId = 2,
-                            AnswerId = 1,
-                            Id = 9
-                        },
-                        new
-                        {
-                            QuestionId = 2,
-                            AnswerId = 2,
-                            Id = 10
-                        },
-                        new
-                        {
-                            QuestionId = 2,
-                            AnswerId = 3,
-                            Id = 11
-                        },
-                        new
-                        {
-                            QuestionId = 2,
-                            AnswerId = 4,
-                            Id = 12
-                        },
-                        new
-                        {
-                            QuestionId = 2,
-                            AnswerId = 5,
-                            Id = 13
-                        },
-                        new
-                        {
-                            QuestionId = 2,
-                            AnswerId = 6,
-                            Id = 14
-                        },
-                        new
-                        {
-                            QuestionId = 2,
-                            AnswerId = 7,
-                            Id = 15
-                        },
-                        new
-                        {
-                            QuestionId = 2,
-                            AnswerId = 8,
-                            Id = 16
-                        });
                 });
 
             modelBuilder.Entity("GramTrainingCoreAngular.Domain.Rules.GrRule", b =>
@@ -266,12 +170,12 @@ namespace GramTrainingCoreAngular.Migrations
 
             modelBuilder.Entity("GramTrainingCoreAngular.Domain.Questions.QuestionAnswer", b =>
                 {
-                    b.HasOne("GramTrainingCoreAngular.Domain.Questions.Answer", "Answer")
+                    b.HasOne("GramTrainingCoreAngular.Domain.Questions.Question", "Question")
                         .WithMany("QuestionAnswers")
                         .HasForeignKey("AnswerId")
                         .OnDelete(DeleteBehavior.Cascade);
 
-                    b.HasOne("GramTrainingCoreAngular.Domain.Questions.Question", "Question")
+                    b.HasOne("GramTrainingCoreAngular.Domain.Questions.Answer", "Answer")
                         .WithMany("QuestionAnswers")
                         .HasForeignKey("QuestionId")
                         .OnDelete(DeleteBehavior.Cascade);

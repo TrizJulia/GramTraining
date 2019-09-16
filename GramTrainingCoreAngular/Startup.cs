@@ -27,7 +27,9 @@ namespace GramTrainingCoreAngular
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<GrDbContext>(options => options
-            .UseSqlServer(Configuration.GetConnectionString("Default")));
+            .UseSqlServer(Configuration.GetConnectionString("Default"))
+            .EnableSensitiveDataLogging()
+            );
             services.AddMvc();
         }
 

@@ -8,11 +8,11 @@ export const questionsWithSpecialWords: Question[] =
         'Who?',
         'Where?',
         'When?',
-        'Why',
-        'How',
-        'Which',
-        'What time',
-        'How much'
+        'Why?',
+        'How?',
+        'Which?',
+        'What time?',
+        'How much?'
 ], 2,
     new Rule(0, './assets/pitalni_slova-.jpg', false, false)),
     new Question('Хто?', [

@@ -4,14 +4,16 @@ using GramTrainingCoreAngular.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace GramTrainingCoreAngular.Migrations
 {
     [DbContext(typeof(GrDbContext))]
-    partial class GrDbContextModelSnapshot : ModelSnapshot
+    [Migration("20190916063204_FixQuestionAnswerForeignKey_SeedQuestionAnswer")]
+    partial class FixQuestionAnswerForeignKey_SeedQuestionAnswer
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

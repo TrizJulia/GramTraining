@@ -4,6 +4,7 @@ using GramTrainingCoreAngular.Domain.Rules;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 
 namespace GramTrainingCoreAngular.Data
 {
@@ -19,17 +20,10 @@ namespace GramTrainingCoreAngular.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<QuestionAnswer>()
-                .HasKey(bc => new { bc.QuestionId, bc.AnswerId });
-            modelBuilder.Entity<QuestionAnswer>()
-                .HasOne(bc => bc.Question)
-                .WithMany(b => b.QuestionAnswers)
-                .HasForeignKey(bc => bc.QuestionId);
-            modelBuilder.Entity<QuestionAnswer>()
-                .HasOne(bc => bc.Answer)
-                .WithMany(c => c.QuestionAnswers)
-                .HasForeignKey(bc => bc.AnswerId);
-
+            //apply configs from separate classes implemented IEntityTypeConfiguration<>
+            modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+                      
+            //seed data
             modelBuilder.Entity<GrRule>().HasData(
              new
              {

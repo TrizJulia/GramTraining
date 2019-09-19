@@ -17,6 +17,7 @@ namespace GramTrainingCoreAngular.Data
         }
 
        public DbSet<Question> Question { get; set; }
+       // public DbSet<GrRule> Rule { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

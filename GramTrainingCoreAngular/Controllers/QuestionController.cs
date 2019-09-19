@@ -2,9 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using GramTrainingCoreAngular.Data;
+using GramTrainingCoreAngular.Domain.Questions;
+using GramTrainingCoreAngular.Models.Questions;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace GramTrainingCoreAngular.Controllers
 {
@@ -14,18 +18,24 @@ namespace GramTrainingCoreAngular.Controllers
     {
         private readonly GrDbContext _db;
 
-        public QuestionController(GrDbContext db)
+        public IMapper Mapper { get; }
+
+        public QuestionController(GrDbContext db, IMapper mapper)
         {
             _db = db;
+            Mapper = mapper;
         }
         // GET: api/Question
-        [HttpGet]
-        public IEnumerable<string> Get()
+        [HttpGet("List")]
+        public async Task<IEnumerable<QuestionViewModel>> Index()
         {
             var AnswersIdArray = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8 };
-          // _db.Question.Include(x => x.Answers).Include(x => x.Rule)
-                 // .SelectMany(x => x.Answers.Where(y => AnswersIdArray.Contains(y.Id))).ToList();
-            return new string[] { "value1", "value2" };
+            var questions = await _db.Question.Include(x => x.QuestionAnswers)
+                .ThenInclude(qa=>qa.Answer)
+                .Include(x => x.Rule).ToListAsync();
+            var questModels = Mapper.Map<List<Question>, List<QuestionViewModel>>(questions);
+            //.SelectMany(x => x.Answers.Where(y => AnswersIdArray.Contains(y.Id))).ToList();
+            return questModels;
         }
 
         // GET: api/Question/5

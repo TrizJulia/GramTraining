@@ -11,6 +11,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.FileProviders;
 using Microsoft.EntityFrameworkCore;
+using AutoMapper;
+using System.Reflection;
 
 namespace GramTrainingCoreAngular
 {
@@ -26,6 +28,7 @@ namespace GramTrainingCoreAngular
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddAutoMapper(Assembly.GetExecutingAssembly());
             services.AddDbContext<GrDbContext>(options => options
             .UseSqlServer(Configuration.GetConnectionString("Default"))
             .EnableSensitiveDataLogging()

@@ -6,3 +6,10 @@
 .answers{
     font-size:22px;
 }
+.list-group-item{
+    cursor:pointer;
+}
+
+.question-text {
+    padding-bottom: 30px;
+}

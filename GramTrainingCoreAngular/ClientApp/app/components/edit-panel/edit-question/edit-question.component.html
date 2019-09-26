@@ -1,0 +1,19 @@
+<div class="row">
+    <div class="col-xs-12">
+        <div class="form-group">
+            <label for="question">Edit question text</label>
+            <input type="text" class="form-control" name="question">
+        </div>
+        <div class="form-group">            
+            <input type="text" class="form-control"> 
+            <button class="btn btn-primary">Add</button>             
+        </div>
+        <ul class="list-group" *ngIf="answers.length>0 else noAnswers">                 
+                <li class="list-group-element" *ngFor="let answer of answers">
+                    <span>{{answer.text}}</span>
+                    <button class="btn btn-primary glyphicon glyphicon-remove"></button>
+                </li>                
+            </ul> 
+            <div class="bs-callout bs-callout-info" #noAnswer> No answers were added yet</div>
+    </div>
+</div>

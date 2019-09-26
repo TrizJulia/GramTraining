@@ -3,7 +3,7 @@ import {Rule} from './rule.model';
 
 export const questionsWithSpecialWords: Question[] =
 [
-    new Question('Де?', [
+    new Question(8,'Де?', [
         'What?',
         'Who?',
         'Where?',
@@ -15,7 +15,7 @@ export const questionsWithSpecialWords: Question[] =
         'How much?'
 ], 2,
     new Rule(0, './assets/pitalni_slova-.jpg', false, false)),
-    new Question('Хто?', [
+    new Question(9,'Хто?', [
     'What?',
     'Who?',
     'Where?',
@@ -27,7 +27,7 @@ export const questionsWithSpecialWords: Question[] =
     'How much'
 ], 1,
     new Rule(0, './assets/pitalni_slova-.jpg', false, false)),
-    new Question('Коли?', [
+    new Question(10,'Коли?', [
         'What?',
         'Who?',
         'Where?',
@@ -39,7 +39,7 @@ export const questionsWithSpecialWords: Question[] =
         'How much'
     ], 3,
         new Rule(0, './assets/pitalni_slova-.jpg', false, false)),
-    new Question('Який з цих?', [
+    new Question(11,'Який з цих?', [
         'What?',
         'Who?',
         'Where?',
@@ -51,7 +51,7 @@ export const questionsWithSpecialWords: Question[] =
         'How much'
     ], 6,
         new Rule(0, './assets/pitalni_slova-.jpg', false, false)),
-    new Question('Чому?', [
+    new Question(12,'Чому?', [
         'What?',
         'Who?',
         'Where?',
@@ -63,7 +63,7 @@ export const questionsWithSpecialWords: Question[] =
         'How much'
     ], 4,
         new Rule(0, './assets/pitalni_slova-.jpg', false, false)),
-    new Question('Як?', [
+    new Question(13,'Як?', [
         'What?',
         'Who?',
         'Where?',
@@ -75,7 +75,7 @@ export const questionsWithSpecialWords: Question[] =
         'How much'
     ], 5,
         new Rule(0, './assets/pitalni_slova-.jpg', false, false)),
-    new Question('Що?', [
+    new Question(14,'Що?', [
         'What?',
         'Who?',
         'Where?',
@@ -87,7 +87,7 @@ export const questionsWithSpecialWords: Question[] =
         'How much'
     ], 0,
         new Rule(0, './assets/pitalni_slova-.jpg', false, false)),
-        new Question('Скільки?', [
+        new Question(15,'Скільки?', [
             'What?',
             'Who?',
             'Where?',
@@ -99,7 +99,7 @@ export const questionsWithSpecialWords: Question[] =
             'How much'
         ], 8,
             new Rule(0, './assets/pitalni_slova-.jpg', false, false)),
-        new Question('Котра година?', [
+        new Question(16,'Котра година?', [
             'What?',
             'Who?',
             'Where?',
@@ -112,68 +112,68 @@ export const questionsWithSpecialWords: Question[] =
         ], 7,
             new Rule(0, './assets/pitalni_slova-.jpg', false, false)),
 
-    new Question('Коли я співаю?', ['What do  I sing?',
+    new Question(17,'Коли я співаю?', ['What do  I sing?',
     'Where do I sing?',
     'When do I sing?'], 2,
     new Rule(0, './assets/pitalni_slova-.jpg', false, false)),
-    new Question('-Де він грає на гитарі по середам? - У "Корові"',
+    new Question(18,'-Де він грає на гитарі по середам? - У "Корові"',
     ['Where does he play guitar on Wednesday?',
     'When does he play guitar on Wednesday?',
     'How does he play guitar on Wednesday?',
     'Which is he playing guitar on Wednesday?'], 0,
      new Rule(0, './assets/pitalni_slova-.jpg',  false, false)),
-     new Question('-О котрій годині він грає на гитарі по середам? - О 18й',
+     new Question(19,'-О котрій годині він грає на гитарі по середам? - О 18й',
      ['Whom does he play guitar on Wednesday?',
      'When does he play guitar on Wednesday?',
      'What time does he play guitar on Wednesday?',
      'Which is he playing guitar on Wednesday?'], 2,
       new Rule(0, './assets/pitalni_slova-.jpg',  false, false)),
-      new Question('-Що він грає на гитарі по середам? - Рок',
+      new Question(20,'-Що він грає на гитарі по середам? - Рок',
       ['What does he play guitar on Wednesday?',
       'When does he play guitar on Wednesday?',
       'Whom does he play guitar on Wednesday?',
       'Which is he playing guitar on Wednesday?'], 0,
        new Rule(0, './assets/pitalni_slova-.jpg',  false, false)),
-       new Question('Чому твої батьки живуть у Харкові?', ['Where do your parents live in Kharkiv? ',
+       new Question(21, 'Чому твої батьки живуть у Харкові?', ['Where do your parents live in Kharkiv? ',
        'How do your parents live in Kharkiv?', 'Why do your parents live in Kharkiv?',
        'Whom do your parents live in Kharkiv?'], 2,
        new Rule(0, './assets/pitalni_slova-.jpg',  false, false)),
-       new Question('Як твої батьки живуть у Харкові?', ['Where do your parents live in Kharkiv? ',
+       new Question(22, 'Як твої батьки живуть у Харкові?', ['Where do your parents live in Kharkiv? ',
        'How do your parents live in Kharkiv?', 'Why do your parents live in Kharkiv?',
        'Whom do your parents live in Kharkiv?'], 1,
        new Rule(0, './assets/pitalni_slova-.jpg',  false, false)),
-       new Question('Де твої батьки живуть у Харкові? - На Салтівці.', ['Where do your parents live in Kharkiv? ',
+       new Question(23,'Де твої батьки живуть у Харкові? - На Салтівці.', ['Where do your parents live in Kharkiv? ',
        'How do your parents live in Kharkiv?', 'Why do your parents live in Kharkiv?',
        'Whom do your parents live in Kharkiv?'], 0,
        new Rule(0, './assets/pitalni_slova-.jpg',  false, false)),
-       new Question('Я зустріну тебе. Який у тебе вагон? -Перший', ['Where is your carriage?',
+       new Question(24,'Я зустріну тебе. Який у тебе вагон? -Перший', ['Where is your carriage?',
        'What is your carriage?', 'Who is your carriage?',
        'Which is your carriage?'], 3,
        new Rule(0, './assets/pitalni_slova-.jpg',  false, false)),
-     new Question('Чому ти без багажу?', ['Why are you whithout luggage?',
+     new Question(25,'Чому ти без багажу?', ['Why are you whithout luggage?',
      'Where is your luggage?', 'How much is your luggage?',
       'What time is your luggage?'], 0,
       new Rule(0, './assets/prezent-simpl-tablitsa.png', false, true)),
-      new Question('О котрій годині прибуває твій потяг?', ['How does your train come?',
+      new Question(26,'О котрій годині прибуває твій потяг?', ['How does your train come?',
       'What does your train come?', 'Why does your train come?',
         'What time does your train come?'], 3,
         new Rule(0, './assets/prezent-simpl-tablitsa.png', false, true)),
-      new Question('Як пройти на залізничну станцію? - Прямо до магазину і направо',
+      new Question(27,'Як пройти на залізничну станцію? - Прямо до магазину і направо',
        ['Who can I go to the train station?',
       'Why do I go to the train station?', 'Where can I go to the train station?',
       'How can I go to the train station?'], 3,
       new Rule(0, './assets/prezent-simpl-tablitsa.png', false, true)),
-      new Question('Хто загубив сіру валізу?', ['Who does lost a grey suitcase?',
+      new Question(28,'Хто загубив сіру валізу?', ['Who does lost a grey suitcase?',
       'Why does lost a grey suitcase?', 'Was you lost a grey suitcase?'], 0,
       new Rule(1, './assets/prezent-simpl-tablitsa.png', false, true)),
-        new Question('Яка з цих валіз твоя? - Зелена', ['Why is your suitcase?',
+        new Question(29,'Яка з цих валіз твоя? - Зелена', ['Why is your suitcase?',
         'Where is your suitcase?', 'Which is your suitcase?',
         'What is your suitcase? '], 2,
         new Rule(0, './assets/prezent-simpl-tablitsa.png', false, true)),
-        new Question('Чому твоя валіза така велика?', ['Why is your suitcase so big?',
+        new Question(30,'Чому твоя валіза така велика?', ['Why is your suitcase so big?',
         'Who is your suitcase so big?'], 0,
         new Rule(0, './assets/prezent-simpl-tablitsa.png', false, true)),
-        new Question('Що в середині твоєї валізи?', ['What is inside your suitcase?',
+        new Question(31,'Що в середині твоєї валізи?', ['What is inside your suitcase?',
         'Who is inside your suitcase?', 'Whom is inside your suitcase?'], 0,
         new Rule(0, './assets/prezent-simpl-tablitsa.png', false, true)),
   ];

@@ -1,0 +1,8 @@
+.list-group-item > div{
+    display: inline-block;
+    min-height: 33px;
+}
+
+.list-group-item .btn{
+    margin-left:10px;
+}

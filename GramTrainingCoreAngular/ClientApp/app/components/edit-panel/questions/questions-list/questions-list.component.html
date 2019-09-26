@@ -1,0 +1,11 @@
+<h4>Questions</h4>        
+<ul class="list-group">
+    <li class="list-group-item" 
+    *ngFor="let question of questions; index as i" 
+    (click)="selectQuestion(i)">
+        <div>{{question.questionText}} </div>                     
+        <button type="button" class="btn btn-danger pull-right"><span class="glyphicon glyphicon-remove"></span></button>
+        <button type="button" class="btn btn-primary pull-right" route="/editQuestion" ><span class="glyphicon glyphicon-pencil"></span></button>
+    </li>
+</ul> 
+

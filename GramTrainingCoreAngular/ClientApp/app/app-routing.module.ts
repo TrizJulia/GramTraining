@@ -1,3 +1,4 @@
+import { EditQuestionComponent } from './components/edit-panel/edit-question/edit-question.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
@@ -9,7 +10,8 @@ import { EditPanelComponent } from './components/edit-panel/edit-panel.component
 const appRoutes: Routes = [
     { path: '', component: ListComponent },
     { path: 'rules', component: RulesComponent},
-    { path: 'manage', component: EditPanelComponent}
+    { path: 'manage', component: EditPanelComponent},
+    { path: 'editQuestion',  component: EditQuestionComponent}
    // { path: '**', redirectTo: '/not-found' } 
 ];
 

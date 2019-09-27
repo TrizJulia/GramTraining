@@ -35,3 +35,4 @@ packages/
 /GramTrainingCoreAngular/node_modules
 /GramTrainingCoreAngular/wwwroot/
 /GramTrainingCoreAngular/ClientApp/dist/main-server.js
+/GramTrainingCoreAngular/ClientApp/dist/

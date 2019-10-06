@@ -8,7 +8,8 @@
     </div>
     <div class="col-sm-6 col-xs-12">
         <app-question-details
-            *ngIf="question; else infoText">
+            *ngIf="selectedQuestion; else infoText" 
+            [question]="selectedQuestion">
         </app-question-details>
         <ng-template #infoText>
             Select question to see details

@@ -19,6 +19,8 @@ import { EditQuestionComponent } from './components/edit-panel/edit-question/edi
 import { EditAnswerComponent } from './components/edit-panel/edit-question/edit-answer/edit-answer.component';
 import { QuestionsComponent } from './components/edit-panel/questions/questions.component';
 import { QuestionDetailsComponent } from './components/edit-panel/questions/question-details/question-details.component';
+import { QuestionLoadService } from './services/questions-load.service';
+import { QuestionsResolverService } from './services/questions-resolver.service';
 
 
 @NgModule({
@@ -44,7 +46,9 @@ import { QuestionDetailsComponent } from './components/edit-panel/questions/ques
         AppRoutingModule        
     ],
     providers: [
-        QuestionService
+        QuestionService,
+        QuestionLoadService,
+        QuestionsResolverService
     ]
 })
 export class AppModuleShared {

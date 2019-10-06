@@ -13,17 +13,13 @@ export class QuestionsListComponent implements OnInit {
   constructor(private questionService: QuestionService) { }
 
   ngOnInit() {
-    this.questionService.fetchQuestions()
-    .subscribe((questions:Question[])=>{ 
-      this.questions = questions;
-      console.log(this.questions);
-      
-    });
+    this.questions = this.questionService.getQuestions();
+   
   }
 
   selectQuestion(id: number){
     console.log("selectedQuestion id" + id + "question" + this.questions);
-    this.questionService.questionSelected.emit(this.questions[id]);
+    this.questionService.questionSelected.next(this.questions[id]);
   }
 
 }

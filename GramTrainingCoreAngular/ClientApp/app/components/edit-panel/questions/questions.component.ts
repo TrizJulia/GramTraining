@@ -8,14 +8,14 @@ import { QuestionService } from '../../../services/question.service';
   styleUrls: ['./questions.component.css']
 })
 export class QuestionsComponent implements OnInit {  
-question: Question
+  selectedQuestion: Question
   constructor(private questionService: QuestionService) { }
 
   ngOnInit() {
     this.questionService.questionSelected
     .subscribe((question:Question)=>{
       console.log("question from details" + question);
-      this.question = question;
+      this.selectedQuestion = question;
     })
   }
 

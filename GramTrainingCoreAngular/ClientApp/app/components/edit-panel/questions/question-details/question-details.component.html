@@ -1,6 +1,9 @@
 <h4>Answers</h4>
-<ul class="list-group">
+<ul class="list-group" *ngIf="question != undefined else noQuestion">
     <li class="list-group-item" *ngFor="let answer of question.answers">
          {{answer.text}}
     </li>
 </ul>
+<ng-template #noQuestion>
+    No answers
+</ng-template>
